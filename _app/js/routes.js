@@ -1,31 +1,23 @@
 var routes = angular.module('routes', ['ui.router', 'oc.lazyLoad']);
 routes.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', function($stateProvider, $urlRouterProvider, $ocLazyLoadProvider){
-    $stateProvider.state('layout', {
-        url: '',
-        abstract: true,
-        views: {
-            "": {
-                templateUrl: "views/app.html"
-            }
-        },
-        controller:''
-        //,
-        //resolve: {
-        //    deps: ['$ocLazyLoad', function ($ocLazyLoad) {
-        //        return $ocLazyLoad.load(['js/controllers/warmUpController.js']);
-        //    }]
-        //}
-    }).state('layout.app',{
-        url:'/app',
-        views:{
-            '':{
-                template:'<div ng-view></div>'
-            },
-            'header':{
-                templateUrl:'views/header.html',
-                controller:''
-            }
-        }
+    $stateProvider
+        .state('layout', {
+        url:'',
+        templateUrl:'views/app.html'
     })
-     $urlRouterProvider.otherwise('/');
+    .state('layout.app',{
+            url:'/app',
+            views:{
+                '':{
+                    templateUrl:'views/footer.html'
+                },
+                'header':{
+                    templateUrl:'views/header.html'
+                },
+                'footer':{
+                    templateUrl:'views/footer.html'
+                }
+            }
+        })
+     $urlRouterProvider.otherwise('/app');
 }]);
