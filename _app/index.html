@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/lib/bootstrap/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/lib/angular-bootstrap/ui-bootstrap-csp.css"/>
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/lib/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/jquery-md5/jquery.md5.js"></script>
+    <script src="js/lib/bootstrap/bootstrap.js"></script>
+    <script src="js/lib/bootstrap-timepicker/bootstrap-timepicker.js"></script>
+    <script src="js/lib/jquery-bootstrap-growl/jquery.bootstrap-growl.js"></script>
+    <script src="js/lib/underscore/underscore-min.js"></script>
+
+    <script src="js/lib/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/angular-ui-router/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/oclazyload/ocLazyLoad.min.js"></script>
+    <script src="js/lib/angular-bootstrap/ui-bootstrap.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/lib/angular-bootstrap/ui-bootstrap-tpls.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/filters.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/routes.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/directives.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/services.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<!--<div c-loading state="{{_loading.state}}" desc="{{_loading.desc}}"></div>-->
+<!--<div c-alert="{{_modal.type}}" toggle="_modal.toggle" title="{{_modal.title}}" desc="{{_modal.desc}}" ok="{{_modal.okText}}" ok-do="_modal.okDo()" cancel="{{_modal.cancelText}}" cancel-do="_modal.cancelDo()"></div>-->
+<div ui-view></div>
+<audio>
+    您的浏览器不支持 audio 标签。
+</audio>
+</body>
+</html>
+
+<script>
+    // 点击按钮声音注册AZ
+//    var clickAudio = document.getElementById('_playClickAudio');
+//    clickAudio.src ='./assets/audio/click.mp3';
+//    $('body').on("click", ".clickAudio:not(.disable)", function () {
+//        clickAudio.play()
+//    });
+</script>

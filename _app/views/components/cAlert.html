@@ -1,0 +1,15 @@
+<div class="c-modal-container c-alert-container" ng-show="toggle">
+    <div class="c-modal-wrap">
+        <div class="c-modal c-modal-confirm" ng-show="toggle">
+            <h3 class="c-modal-title" ng-bind="title"></h3>
+            <p class="c-modal-content" ng-bind="desc"></p>
+            <div class="ops clearfix" ng-show="cAlert=='confirm'">
+                <button class="btn btn-size-default modal-cancel fl clickAudio"  ng-bind="cancel" ng-click="clickCancel()"></button>
+                <button class="btn btn-size-default btn-primary fr clickAudio"  ng-bind="ok" ng-click="clickOk()"></button>
+            </div>
+            <div class="ops" ng-show="cAlert=='alert'">
+                <button class="btn btn-size-default btn-primary clickAudio" style="width: 88%"  ng-bind="ok" ng-click="clickOk()"></button>
+            </div>
+        </div>
+    </div>
+</div>

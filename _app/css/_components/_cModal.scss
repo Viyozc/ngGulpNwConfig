@@ -1,0 +1,80 @@
+.modal-open {
+  overflow: hidden;
+}
+.c-modal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  .c-modal-wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.7);
+  .c-modal{
+      opacity: 1;
+      box-shadow: 0 16px 25px 0 rgba(11, 31, 40, 0.26), 0 4px 6px 0 rgba(63, 94, 112, 0.08);
+      border: solid 1px #e1e8ed;
+      background-color: #fff;
+      color: #555459;
+      position: relative;
+
+      .modal-close-arrow{
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+        width: 16px;
+        height: 16px;
+        background: url("../resource/img/close.png") no-repeat center;
+        background-size: 16px 16px;
+        margin-left: auto;
+        cursor: pointer;
+        transition: transform 0.5s;
+        &:hover{
+          transform: rotate(180deg);
+        }
+      }
+      .modal-title{
+        margin-top: 34px;
+        font-size: 21px;
+        line-height: 24px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// 确认 取消 提示 样式
+.c-modal-confirm{
+  width: 540px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 16px 25px 0 rgba(11, 31, 40, 0.26), 0 4px 6px 0 rgba(63, 94, 112, 0.08);
+  border: solid 1px #e1e8ed;
+  padding: 30px;
+  text-align: center;
+  .c-modal-title{
+    font-size: 21px;
+  }
+  .c-modal-content{
+    padding: 40px 0 76px;
+    font-size: 17px;
+  }
+  .ops{
+    .btn{
+      width: 225px;
+      &.modal-cancel{
+        background-color: #98a2aa;
+        &:hover{
+          background-color: #88929a;
+        }
+      }
+    }
+  }
+}

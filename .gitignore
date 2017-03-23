@@ -1,0 +1,5 @@
+buildApp
+.idea
+cache
+dest
+node_modules

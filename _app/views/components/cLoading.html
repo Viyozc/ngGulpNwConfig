@@ -1,0 +1,18 @@
+<div class="c-loading-container" ng-show="state == 'loading' || state == 'fail'">
+    <div class="c-loading-box">
+        <div class="left-icon">
+            <img src="./assets/img/load-loading.png" ng-show="state =='loading'">
+            <img src="./assets/img/load-error-cry.png" ng-show="state =='fail'">
+        </div>
+        <div class="right-info loading" ng-show="state =='loading'">
+            <p class="text" ng-bind="desc"></p>
+            <span class="progress"></span>
+        </div>
+        <div class="right-info fail" ng-show="state =='fail'">
+            <p class="text">
+                <span>加载失败，</span>
+                <span class="link">重试</span>
+            </p>
+        </div>
+    </div>
+</div>

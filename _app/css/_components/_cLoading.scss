@@ -1,0 +1,68 @@
+.c-loading-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  .c-loading-box{
+    width: 160px;
+    height: 72px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(63, 94, 112, 0.08);
+    border: solid 1px #e1e8ed;
+
+    position: relative;
+
+    .left-icon{
+      display: inline-block;
+      img{
+        margin: 20px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .right-info{
+      display:  block;
+      width: 150px;
+      position: absolute;
+      right: 0;
+      top: 15px;
+      text-align: center;
+      margin-right: 20px;
+
+      transform-origin: top right;
+      transform: scale(0.5);
+      &.loading{
+        .text{
+          font-size: 20px;
+          line-height: 50px;
+        }
+        @keyframes bgLinerMove {
+          from { background-position: 0 0; }
+          to { background-position: 90% 0; }
+        }
+        .progress{
+          display: block;
+          height: 8px;
+          margin: 0;
+          border-radius: 4px;
+          background: url("../assets/img/progress-2color-icon.png") repeat-x center/25px 14px ;
+          animation: bgLinerMove 2.5s linear infinite;
+          background-size: 10% 100%;
+        }
+      }
+      &.fail{
+        .text{
+          font-size: 20px;
+          line-height: 80px;
+        }
+      }
+    }
+  }
+}

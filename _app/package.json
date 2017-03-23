@@ -1,0 +1,29 @@
+{
+  "main": "index.html",
+  "name": "xcaseFamily",
+  "single-instance": true,
+  "description": "",
+  "version": "1.0.0",
+  "keywords": [
+    "xcaseFamily",
+    "NW.js"
+  ],
+  "nodejs": true,
+  "window": {
+    "toolbar": true,
+    "frame": true,
+    "icon": "assets/img/logo_bird.png",
+    "position": "center",
+    "min_width": 1206,
+    "min_height": 722,
+    "height": 740,
+    "resizable": true,
+    "show_in_taskbar": true
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-cache": "^0.4.6",
+    "gulp-imagemin": "^3.1.1",
+    "imagemin-optipng": "^5.2.1"
+  }
+}
